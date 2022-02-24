@@ -26,5 +26,6 @@ of synchronization in go because some operations in channels are blocking. There
 The channels were mainly used in the Producer-Consumer problem. Where a buffered channel is made and the producers keep on producing items into that channel and consumer
 consumes the data from that channel.
 It should comply with the following rules:
-1. Producer should not produce if the channel is full
-2. Consumer should not consume if the channel is empty
+1. Producer should not produce if the channel is full.
+2. Consumer should not consume if the channel is empty.
+3. The buffer should not be accessed by the producer and consumer at the same time.
