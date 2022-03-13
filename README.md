@@ -29,3 +29,7 @@ It should comply with the following rules:
 1. Producer should not produce if the channel is full.
 2. Consumer should not consume if the channel is empty.
 3. The buffer should not be accessed by the producer and consumer at the same time.
+
+The producer and consumer problem has the main problem of synchronization. Where the producer should produce and only the should it be consumed by the consumer.
+So this is where channels help us solve this problem. We can wait on channels until a value is pushed into it so that it can be retrieved by the other go routine 
+which was waiting to get the value from the channel.
